@@ -1,29 +1,34 @@
-// --------------->components/auth/Register.js
+// OK Inside->components/auth/Register.js
 import React, { useState } from 'react';
+import authService from '../../services/authService';
 import InputField from '../common/InputField';
 import Button from '../common/Button';
 import '../common/Form.css';
-//////////////------->
-import authService from '../../services/authService';
+//----///*******/------->
 
 const Register = () => {
 
-  //---
+  //---Done
+
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  /////
+  //Done
   const [confirmPassword, setConfirmPassword] = useState('');
+//
 
   const handleRegister = async (e) => {
     e.preventDefault();
     if (password !== confirmPassword) {
+      console.error("Inside Passwords");
       console.error("Passwords don't match");
       return;
     }
 
     try {
+      //
       const newUser = await authService.register(email, password);
       console.log('New user registered:', newUser);
+      //
     } catch (error) {
       console.error('Registration error:', error);
     }

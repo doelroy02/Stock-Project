@@ -1,22 +1,25 @@
 
-//
+//Inside Auth
 
 const users = [];
 
-// Simulate user registration
+
 const authService = {
   register(email, password) {
+    //___
     const newUser = { email, password };
     users.push(newUser);
-    console.log("String perfect")
+    console.log("Auth service inside ")
     console.log('Registered:', newUser);
     return Promise.resolve(newUser);
   },
 
-  // Simulate user login
   login(email, password) {
+
+    
     const user = users.find((u) => u.email === email && u.password === password);
     if (user) {
+      // Simulate user login
       //
       console.log('Logged in:', user);
       return Promise.resolve(user);

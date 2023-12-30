@@ -1,7 +1,9 @@
-import React from 'react';
-// components/common/InputField.js
 
-//Ok
+/////
+import React from 'react';
+
+
+// Done
 
 
 const InputField = ({ type, placeholder, value, onChange, required }) => {

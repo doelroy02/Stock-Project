@@ -1,11 +1,13 @@
-// ////?*********components/auth/Login.js
+// Ok ----> components/auth/Login.js
+import Button from '../common/Button';
 import React, { useState } from 'react';
 import InputField from '../common/InputField';
-import Button from '../common/Button';
-import '../common/Form.css'; 
 import authService from '../../services/authService';
+import '../common/Form.css'; 
 
 const Login = () => {
+
+
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
@@ -14,6 +16,7 @@ const Login = () => {
 
     try {
       const user = await authService.login(email, password);
+      console.log("User logged in")
       console.log('Logged in:', user);
     } catch (error) {
       console.error('Login error:', error);
@@ -24,19 +27,24 @@ const Login = () => {
 
     <div className="form-container"> {}
   
+
+
       <h2>Login</h2>
       <form onSubmit={handleLogin} className="auth-form"> {/**/}
         <InputField
           type="email"
-          /**/
+          /*OK Tested*/
           placeholder="Email"
           value={email}
+          /*OK Tested*/
           onChange={(e) => setEmail(e.target.value)}
           required
         />
+        
         <InputField
           type="password"
-          placeholder="Password"
+        
+        /*OK Tested*/  placeholder="Password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
           required

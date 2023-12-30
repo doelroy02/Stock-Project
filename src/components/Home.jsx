@@ -32,8 +32,10 @@ const Home = () => {
       </header>
 
       <div className="content">
-        <h2>Welcome To Dashboard</h2>
-        <p>Explore Market data</p>
+        
+        <h2>Welcome To Stock Dashboard</h2>
+        <p>Analyze Market data</p>
+
         <StockData handleStockClick={handleStockClick} />
       </div>
     </div>

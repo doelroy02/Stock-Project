@@ -6,7 +6,7 @@
   border-radius: 8px;
   background-color: #f9f9f9;
 }
-/* common/Form.css */
+
   
   .auth-form input {
     width: 100%;
@@ -16,19 +16,21 @@
     border-radius: 4px;
   }
 
-  /* common/Form.css */
+  /* ---> *****?> common/Form.css */
   
   .auth-form button {
     width: 100%;
     margin: 10px 0;
     padding: 10px;
     border: none;
+      /* ---> *****?> common/Form.css */
     border-radius: 4px;
     background-color: #007bff;
     color: white;
     cursor: pointer;
   }
   
+    /* ---> *****?> common/Form.css */
   .auth-form button:hover {
     background-color: #0056b3;
   }
@@ -37,7 +39,7 @@
     margin-top: 15px;
     text-align: center;
   }
-  /* common/Form.css */
+
   .auth-form a {
     color: #007bff;
     text-decoration: none;
@@ -54,7 +56,7 @@
     border: 1px solid #ddd;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    text-align: center; /* Aligns content to the center */
+    text-align: center;   /* ---> *****?> common/Form.css */
   }
   
   .header {
@@ -63,10 +65,11 @@
     align-items: center;
     margin-bottom: 20px;
   }
+    /* ---> *****?> common/Form.css */
   
   .title {
     font-size: 28px;
     color: #333;
-    margin: 0 auto; /* Centers the 'Stock Rocket' heading */
+    margin: 0 auto; 
   }
   

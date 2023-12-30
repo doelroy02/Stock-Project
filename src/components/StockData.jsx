@@ -4,19 +4,22 @@ import { Line } from 'react-chartjs-2';
 import '../public/StockData.css'
 
 const StockData = () => {
-  /////////////
-  /////////
+  ///Done
+  //**** */
   const [stockData, setStockData] = useState({});
   const [chartData, setChartData] = useState({});
   const [selectedStock, setSelectedStock] = useState(null);
-  //Here is API token
-  const API_KEY = 'pk_735e1d2999f245e2bc342494b8763f5a'; 
+  //Here is API token for access the stock data
+  const API_KEY = 'pk_220a807b92ec4770b15078b499d449ab'; 
 
   useEffect(() => {
+    console.log("Inside stock data logger")
     const fetchOptionsSymbols = async () => {
       try {
         const optionsResponse = await fetch(`https://cloud.iexapis.com/stable/ref-data/options/symbols?token=${API_KEY}`);
         if (optionsResponse.ok) {
+
+          // __**
           const optionsData = await optionsResponse.json();
           const symbolsArray = Object.entries(optionsData).reduce((acc, [symbol, nums]) => {
             if (Array.isArray(nums)) {
@@ -26,11 +29,14 @@ const StockData = () => {
           }, []);
           const symbols = symbolsArray.slice(0, 100);
           
+
           if (symbols.length > 0) {
             fetchStockData(symbols);
           } else {
+
             throw new Error('No symbols found');
           }
+
         } else {
           throw new Error('Failed to fetch options symbols');
         }
@@ -49,6 +55,7 @@ const StockData = () => {
           throw new Error('Failed to fetch stock data');
         }
       } catch (error) {
+
         console.error('Error fetching stock data:', error);
       }
     };
@@ -89,13 +96,17 @@ const StockData = () => {
   };
 
   useEffect(() => {
-    // When stockData is updated, prepareChartData and update chart
+    // Data upserted
     if (selectedStock && stockData[selectedStock]) {
+
+
       prepareChartData(selectedStock);
     }
   }, [selectedStock, stockData, prepareChartData]);
 
   return (
+
+
     <div className="stock-data-container">
       <h2>Real-Time Stock Data</h2>
       <div className="company-blocks">

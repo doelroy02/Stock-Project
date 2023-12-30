@@ -1,14 +1,14 @@
-/* StockData.css */
+
 .stock-data-container {
     padding: 20px;
   }
-  
+  /**/
   .company-blocks {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
   }
-  
+  /**/
   .company-block {
     border: 1px solid #ccc;
     border-radius: 8px;
@@ -16,12 +16,12 @@
     width: 300px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
-  
+  /**/
   .company-block h3 {
     margin-bottom: 10px;
     font-size: 18px;
   }
-  
+  /**/
   .chart-container {
     margin-top: 20px;
     padding: 20px;
