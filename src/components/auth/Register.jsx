@@ -1,13 +1,17 @@
-// components/auth/Register.js
+// --------------->components/auth/Register.js
 import React, { useState } from 'react';
 import InputField from '../common/InputField';
 import Button from '../common/Button';
 import '../common/Form.css';
+//////////////------->
 import authService from '../../services/authService';
 
 const Register = () => {
+
+  //---
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  /////
   const [confirmPassword, setConfirmPassword] = useState('');
 
   const handleRegister = async (e) => {
@@ -24,7 +28,7 @@ const Register = () => {
       console.error('Registration error:', error);
     }
   };
-
+///Ok
   return (
     <div className="form-container"> {/* Apply form styling */}
       <h2>Register</h2>

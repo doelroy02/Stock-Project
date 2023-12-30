@@ -4,10 +4,13 @@ import { Line } from 'react-chartjs-2';
 import '../public/StockData.css'
 
 const StockData = () => {
+  /////////////
+  /////////
   const [stockData, setStockData] = useState({});
   const [chartData, setChartData] = useState({});
   const [selectedStock, setSelectedStock] = useState(null);
-  const API_KEY = 'pk_da79360e6f094560b01f769757baf4a3'; // Replace with your actual API key
+  //Here is API token
+  const API_KEY = 'pk_735e1d2999f245e2bc342494b8763f5a'; 
 
   useEffect(() => {
     const fetchOptionsSymbols = async () => {

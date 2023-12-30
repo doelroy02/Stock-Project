@@ -1,8 +1,8 @@
-// components/auth/Login.js
+// ////?*********components/auth/Login.js
 import React, { useState } from 'react';
 import InputField from '../common/InputField';
 import Button from '../common/Button';
-import '../common/Form.css'; // Import shared form styling
+import '../common/Form.css'; 
 import authService from '../../services/authService';
 
 const Login = () => {
@@ -21,11 +21,14 @@ const Login = () => {
   };
 
   return (
-    <div className="form-container"> {/* Apply form styling */}
+
+    <div className="form-container"> {}
+  
       <h2>Login</h2>
-      <form onSubmit={handleLogin} className="auth-form"> {/* Apply form styling */}
+      <form onSubmit={handleLogin} className="auth-form"> {/**/}
         <InputField
           type="email"
+          /**/
           placeholder="Email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
